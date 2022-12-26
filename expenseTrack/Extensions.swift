@@ -32,3 +32,15 @@ extension String {
         return parsedDate
     }
 }
+
+extension Date: Strideable {
+    func formatted() -> String {
+        return self.formatted(.dateTime.day().month().year())
+    }
+}
+
+extension Double {
+    func rounded2Digits() -> Double {
+        return (self * 100).rounded() / 100
+    }
+}
